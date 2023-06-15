@@ -1,6 +1,5 @@
 <script lang="ts">
-
-import SettingsDropdown from "$lib/components/navbar/SettingsDropdown.svelte";
+import {overlayVisibleStateStore} from "$lib/utils/stores";
 </script>
 <div>
 
@@ -9,3 +8,4 @@ import SettingsDropdown from "$lib/components/navbar/SettingsDropdown.svelte";
     <title>Main | OpenMerce</title>
 </svelte:head>
 
+{$overlayVisibleStateStore}
