@@ -10,7 +10,7 @@
     import {goto} from "$app/navigation";
 </script>
 
-<div class="hidden md:flex items-center">
+<div class="hidden sm:flex items-center">
     <button on:click={()=>goto('/')}>
         <Logo/>
     </button>

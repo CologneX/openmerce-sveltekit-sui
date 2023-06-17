@@ -5,8 +5,9 @@
     import {onMount} from "svelte";
     import {overlayVisibleStateStore} from "$lib/utils/stores";
     import Navbar from '$lib/components/navbar/Navbar.svelte'
-
+    import {register} from 'swiper/element/bundle';
     onMount(() => {
+        register();
             getTheme();
 
         }
@@ -22,7 +23,7 @@
             </Header>
         </AppShell>
     </Group>
-    <Container>
+    <Container size="xl">
         <Box>
             {#if $overlayVisibleStateStore}
                 <div>
