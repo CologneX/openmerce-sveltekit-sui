@@ -1,12 +1,11 @@
-export const prerender = true;
-export const ssr = false;
-
-
 import type {LayoutLoad} from './$types';
 import {isLoggedInStore} from "$lib/utils/stores";
+import {get} from "svelte/store";
+import {redirect} from '@sveltejs/kit';
 
 export const load = (async () => {
-    if (localStorage.getItem('first_name')) {
-        isLoggedInStore.set(true);
+
+    if (!get(isLoggedInStore)) {
+        throw redirect(308, "/login");
     }
 }) satisfies LayoutLoad;

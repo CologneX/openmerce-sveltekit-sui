@@ -3,17 +3,18 @@
     import {AppShell, Box, colorScheme, Container, Group, Header, Overlay, SvelteUIProvider} from '@svelteuidev/core';
     import {getTheme} from "$lib/utils/themeChanger";
     import {onMount} from "svelte";
-    import {overlayVisibleStateStore} from "$lib/utils/stores";
+    import {overlayVisibleStateStore, screenWidthStore} from "$lib/utils/stores";
     import Navbar from '$lib/components/navbar/Navbar.svelte'
     import {register} from 'swiper/element/bundle';
+
     onMount(() => {
-        register();
+            register();
             getTheme();
 
         }
     )
 </script>
-
+<svelte:window bind:innerWidth={ $screenWidthStore}/>
 <SvelteUIProvider withNormalizeCSS withGlobalStyles themeObserver={$colorScheme}>
     <Group zIndex={50} class="z-50">
         <AppShell class="z-50">

@@ -1,18 +1,20 @@
 <script lang="ts">
-    import {Card} from "@svelteuidev/core";
+    import {goto} from "$app/navigation";
 
     export let product;
 </script>
 
-<swiper-slide class="rounded-md shadow-xl aspect-[4/2]">
-   <Card>
-       <Card.Section first>
-           <img src="/coding%20picture.jpg" alt="pic" class="aspect-square rounded-t-md">
+<swiper-slide class="rounded-md shadow-md aspect-[4/2] w-full h-full space-y-4 cursor-pointer" on:click={()=>goto(`/products/${product}`)}>
 
-       </Card.Section>
-   </Card>
-    <div class="p-4">
-        {product}
-    </div>
+
+
+        <img src="/coding%20picture.jpg" alt="pic" class="aspect-square rounded-t-md">
+
+
+        <div class="">
+            {product}
+        </div>
+
+
 
 </swiper-slide>
