@@ -16,7 +16,6 @@
 <Banner/>
 <Divider/>
 
-{$screenWidthStore}
 <div class="relative group">
     <button
             class="z-10 absolute bg-white p-2 top-1/2 rounded-full transform transition-all duration-300 -translate-y-1/2 left-1 opacity-0 group-hover:opacity-100 group-hover:-left-5"

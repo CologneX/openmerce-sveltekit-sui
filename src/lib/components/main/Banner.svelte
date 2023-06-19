@@ -35,7 +35,7 @@
             class="rounded-md relative swiper-container"
     >
         <swiper-slide>
-            <img src="/asu.webp" alt="asu" class="object-contain w-full h-full aspect-[4/1]"/>
+            <img src="/asu.webp" alt="asu" class="object-contain w-full h-full aspect-[4/1] "/>
         </swiper-slide>
         <swiper-slide>
             <img src="/coding%20picture.jpg" alt="asu" class="object-contain w-full h-full aspect-[4/1] rounded-md"/>

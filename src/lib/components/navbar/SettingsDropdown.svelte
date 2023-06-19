@@ -3,6 +3,7 @@
     import Exit from "$lib/icons/Exit.svelte";
     import ThemeChange from "$lib/components/ThemeChange.svelte";
     import {isLoggedInStore} from "$lib/utils/stores";
+    import {goto} from "$app/navigation";
 </script>
 
 
@@ -19,16 +20,24 @@
     <Divider orientation='vertical'/>
     <div class="flex-1 flex flex-col">
         <div class="flex-grow space-y-0">
-            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}>
+            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}
+                    on:click={() =>goto('/profile')}
+            >
                 Profile
             </Button>
-            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}>
+            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}
+                    on:click={() =>goto('/wishlist')}
+            >
                 Wishlist
             </Button>
-            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}>
+            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}
+                    on:click={() =>goto('/transaction-list')}
+            >
                 Transaction
             </Button>
-            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}>
+            <Button variant="subtle" compact ripple fullSize override={{ justifyContent: 'flex-start'}}
+                    on:click={() =>goto('/cart')}
+            >
                 Cart
             </Button>
 

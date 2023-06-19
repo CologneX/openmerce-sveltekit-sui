@@ -4,17 +4,12 @@
     export let product;
 </script>
 
-<swiper-slide class="rounded-md shadow-md aspect-[4/2] w-full h-full space-y-4 cursor-pointer" on:click={()=>goto(`/products/${product}`)}>
+<swiper-slide class="rounded-md shadow-md aspect-[4/2] w-full h-full cursor-pointer"
+              on:click={()=>goto(`/products/${product}`)}>
+    <img src="/emptycart.png" alt="pic"
+         class="aspect-square object-contain">
 
-
-
-        <img src="/coding%20picture.jpg" alt="pic" class="aspect-square rounded-t-md">
-
-
-        <div class="">
-            {product}
-        </div>
-
-
-
+    <div class=p-3>
+        {product}
+    </div>
 </swiper-slide>

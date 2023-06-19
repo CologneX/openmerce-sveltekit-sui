@@ -6,6 +6,7 @@
     import {overlayVisibleStateStore, screenWidthStore} from "$lib/utils/stores";
     import Navbar from '$lib/components/navbar/Navbar.svelte'
     import {register} from 'swiper/element/bundle';
+    import {page} from "$app/stores";
 
     onMount(() => {
             register();
@@ -24,7 +25,7 @@
             </Header>
         </AppShell>
     </Group>
-    <Container size="xl">
+    <Container size="{$page.route.id === '/'? 'xl':'lg'}">
         <Box>
             {#if $overlayVisibleStateStore}
                 <div>

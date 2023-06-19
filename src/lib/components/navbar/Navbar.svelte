@@ -28,6 +28,7 @@
              on:mouseleave={() => $overlayVisibleStateStore = false}
     >
         <ActionIcon size="lg" variant="transparent" color="currentColor"
+                    on:click={()=>goto('/cart')}
         >
             <ShoppingCart/>
         </ActionIcon>
@@ -36,7 +37,7 @@
     <Button variant="outline" ripple class="font-bold text-sm w-20" on:click={()=>goto('/login')}>
         Login
     </Button>
-    <Button ripple class="font-bold text-sm w-20" on:click={()=>goto('/register')}>
+    <Button ripple class="text-sm w-20" on:click={()=>goto('/register')}>
         Register
     </Button>
 
