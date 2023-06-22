@@ -25,7 +25,7 @@
                         <Checkbox size="sm"/>
                         <img src="/emptycart.png" alt="gambar" class="object-contain aspect-square h-full max-h-20">
                         <div class="truncate">
-                            <p class="truncate text-sm md:text-base ">{mantap}</p>
+                            <p class="truncate text-sm md:text-base">{mantap}</p>
                             <p class="font-semibold text-sm md:text-base">Rp. 69</p>
                         </div>
                     </div>
