@@ -7,13 +7,13 @@
     import {screenWidthStore} from "$lib/utils/stores";
 </script>
 
-<svelte:head  >
+<svelte:head>
     <title>Cart | OpenMerce</title>
 </svelte:head>
 
 <div class="grid grid-cols-3 md:grid-cols-6 space-x-8">
     <div class="col-span-4 space-y-4">
-        <h4 class="font-extrabold text-2xl">Cart</h4>
+        <div class="title">Cart</div>
         <Card class="sticky top-12 pt-4 z-10" override={{padding:0, boxShadow:"none"}}>
             <Checkbox label="Select all" size="sm"/>
             <Divider size="lg"/>
@@ -69,7 +69,7 @@
         </div>
     </div>
     <Card class="col-span-2 hidden md:grid grid-flow-row p-4 space-y-4 h-fit sticky top-24">
-        <h4 class="font-semibold text-lg">Shopping summary</h4>
+        <div class="font-bold text-lg">Shopping summary</div>
 
         <div class="grid grid-cols-2">
 
@@ -78,7 +78,7 @@
 
         </div>
         <Divider/>
-        <h4 class="font-bold text-lg">Grand Total</h4>
+        <div class="font-bold text-lg">Grand Total</div >
         <Button class="font-bold text-lg h-12" fullSize ripple variant="filled">Checkout</Button>
     </Card>
 

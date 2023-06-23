@@ -27,8 +27,8 @@
 </svelte:head>
 
 <div class="space-y-8">
-    <h4 class="font-extrabold text-2xl">Transaction List</h4>
     <div class="space-y-2">
+        <div class="title">Transaction List</div>
         <div class="flex flex-row gap-x-2">
             <TextInput icon={Search} placeholder="Search transactions" class="w-full flex-1"/>
             <Button variant="outline" ripple>
